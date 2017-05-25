@@ -27,10 +27,22 @@
             <ListView.FooterTemplate>
                 <DataTemplate>
                     <StackLayout Orientation="Horizontal" Padding="5,5,5,5">
-                        <Button Text="Add New Category" Clicked="OnNewClicked" />
+                        <!--<Button Text="Add New Category" Clicked="OnNewClicked" />-->
                     </StackLayout>
                 </DataTemplate>
             </ListView.FooterTemplate>
         </ListView>
     </ContentPage.Content>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="Add" Activated="OnNewClicked"
+               Priority="0" Order="Secondary" />
+        <!--<ToolbarItem Name="Remove" Activated="OnRemoveClick"
+               Priority="1" Order="Secondary" />-->
+        <!--<ToolbarItem Name="Remove all" Activated="OnRemoveAllClick"
+               Priority="2" Order="Secondary" />
+        <ToolbarItem Name="Save" Activated="OnSaveClick"
+               Priority="3" Order="Secondary" />-->
+    </ContentPage.ToolbarItems>
+
 </ContentPage>
