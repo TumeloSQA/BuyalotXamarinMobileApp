@@ -84,6 +84,15 @@
     <Compile Include="Views\ProductsManagement\AddProduct.xaml.cs">
       <DependentUpon>AddProduct.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ProductsManagement\EditProduct.xaml.cs">
+      <DependentUpon>EditProduct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProductsManagement\ManageProducts.xaml.cs">
+      <DependentUpon>ManageProducts.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProductsManagement\ShowProduct.xaml.cs">
+      <DependentUpon>ShowProduct.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Products\ViewProducts.xaml.cs">
       <DependentUpon>ViewProducts.xaml</DependentUpon>
     </Compile>
@@ -214,6 +223,24 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\ProductsManagement\AddProduct.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\ProductsManagement\ManageProducts.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\ProductsManagement\ShowProduct.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\ProductsManagement\EditProduct.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

@@ -7,22 +7,30 @@
 <StackLayout>
         <Label Text="Product Details"/>
 
-        <Picker x:Name="picker">
+        <Picker x:Name="picker" Title="Select A Category">
             <Picker.ItemDisplayBinding>
                 <Binding Path="CategoryName"/>
             </Picker.ItemDisplayBinding>
         </Picker>
-        
-
-        <!--<Entry Placeholder="Select Category above" IsEnabled="False" x:Name="lblCategory" Text="{Binding Source={x:Reference picker}, Path=SelectedItem}"/>-->
+        <Label x:Name="lblCategory2" Text="{Binding Source={x:Reference picker}, Path=SelectedItem}"/>
+        <Entry Placeholder="Select Category above" IsEnabled="False" x:Name="lblCategory" Text="{Binding Source={x:Reference picker}, Path=SelectedItem}" />
         <TableView Intent="Settings" BackgroundColor="White">
             <TableRoot>
                 <TableSection>
                     <EntryCell x:Name="txtName" Label="Name" Keyboard="Text" />
                     <EntryCell x:Name="txtDescription" Label="Description" Keyboard="Text" />
                     <EntryCell x:Name="txtVendor" Label="Vendor" Keyboard="Text" />
-                    <EntryCell x:Name="txtPrice" Label="Price" Keyboard="Text" />
-
+                    <EntryCell x:Name="txtPrice" Label="Price" Keyboard="Decimal" />
+                    <ViewCell>
+                        <ContentView Padding="0,0">
+                            <ContentView.Padding>
+                                <OnPlatform x:TypeArguments="Thickness" iOS="10,0" WinPhone="0,15,0,0" />
+                            </ContentView.Padding>
+                            <ContentView.Content>
+                                <Button BackgroundColor="#fd6d6d" Text="Save" TextColor="White" Clicked="OnSaveClicked" />
+                            </ContentView.Content>
+                        </ContentView>
+                    </ViewCell>
                 </TableSection>
             </TableRoot>
         </TableView>

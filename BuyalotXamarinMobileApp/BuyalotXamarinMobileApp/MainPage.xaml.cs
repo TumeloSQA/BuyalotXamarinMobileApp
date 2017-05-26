@@ -33,7 +33,7 @@ namespace BuyalotXamarinMobileApp
             var page2 = new MasterPageItem() { Title = "User Management", Icon = "itemIcon2.png", TargetType = typeof(ManageUsers) };
             var page3 = new MasterPageItem() { Title = "Admin Management", Icon = "itemIcon2.png", TargetType = typeof(ManageAdmins) };
             var page4 = new MasterPageItem() { Title = "Products", Icon = "itemIcon2.png", TargetType = typeof(ViewProducts) };
-            var page5 = new MasterPageItem() { Title = "Products Management", Icon = "burger.jpg", TargetType = typeof(AddProduct) };
+            var page5 = new MasterPageItem() { Title = "Products Management", Icon = "burger.jpg", TargetType = typeof(ManageProducts) };
 
 
 

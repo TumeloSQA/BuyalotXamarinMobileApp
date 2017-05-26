@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BuyalotXamarinMobileApp.Views.ProductsManagement.ManageProducts" Title="Products Management">
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <ListView x:Name="lstData" HasUnevenRows="false" Header="Header Value" Footer="Footer"  ItemSelected="OnSelection" >
+            <ListView.HeaderTemplate>
+                <DataTemplate>
+                    <StackLayout Orientation="Horizontal" BackgroundColor="Blue" Padding="5,5,5,5">
+                        <Label Text="Category" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+                        <Label Text="Description" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+                        <Label Text="Name" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+                        <Label Text="Vendor" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+                        <Label Text="Price" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+                    </StackLayout>
+                </DataTemplate>
+            </ListView.HeaderTemplate>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="5,5,5,5">
+                            <Label Text="{Binding Category}" FontSize="Medium" />
+                            <Label Text="{Binding Description}" FontSize="Medium" />
+                            <Label Text="{Binding Name}" FontSize="Medium" />
+                            <Label Text="{Binding Vendor}" FontSize="Medium" />
+                            <Label Text="{Binding Price}" FontSize="Medium" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.FooterTemplate>
+                <DataTemplate>
+                    <StackLayout Orientation="Horizontal" Padding="5,5,5,5">
+                        <Button Text="Add New Product" Clicked="OnNewClicked" />
+                    </StackLayout>
+                </DataTemplate>
+            </ListView.FooterTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
