@@ -9,7 +9,8 @@ using BuyalotXamarinMobileApp.Views;
 using BuyalotXamarinMobileApp.Views.CategoryManagement;
 using BuyalotXamarinMobileApp.Views.UserManagement;
 using BuyalotXamarinMobileApp.Views.AdminManagement;
-//using BuyalotXamarinMobileApp.Views.AdminAccount;
+using BuyalotXamarinMobileApp.Views.Products;
+using BuyalotXamarinMobileApp.Views.ProductsManagement;
 //using BuyalotXamarinMobileApp.Views.ShoppingCart;
 //using BuyalotXamarinApp.View.AdminAccount;
 
@@ -31,8 +32,8 @@ namespace BuyalotXamarinMobileApp
             var page1 = new MasterPageItem() { Title = "Category Management", Icon = "itemIcon1.png", TargetType = typeof(ManageCategories) };
             var page2 = new MasterPageItem() { Title = "User Management", Icon = "itemIcon2.png", TargetType = typeof(ManageUsers) };
             var page3 = new MasterPageItem() { Title = "Admin Management", Icon = "itemIcon2.png", TargetType = typeof(ManageAdmins) };
-            //var page4 = new MasterPageItem() { Title = "Admin Login", Icon = "itemIcon2.png", TargetType = typeof(AdminLoginPage) };
-            //var page5 = new MasterPageItem() { Title = "Shopping Cart", Icon = "burger.jpg", TargetType = typeof(MainActions) };
+            var page4 = new MasterPageItem() { Title = "Products", Icon = "itemIcon2.png", TargetType = typeof(ViewProducts) };
+            var page5 = new MasterPageItem() { Title = "Products Management", Icon = "burger.jpg", TargetType = typeof(AddProduct) };
 
 
 
@@ -40,8 +41,8 @@ namespace BuyalotXamarinMobileApp
             MenuList.Add(page1);
             MenuList.Add(page2);
             MenuList.Add(page3);
-            //MenuList.Add(page4);
-            //MenuList.Add(page5);
+            MenuList.Add(page4);
+            MenuList.Add(page5);
 
 
 

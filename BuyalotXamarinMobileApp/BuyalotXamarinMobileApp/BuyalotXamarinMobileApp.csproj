@@ -41,6 +41,7 @@
     <Compile Include="Data\AdminDb.cs" />
     <Compile Include="Data\CategoryDb.cs" />
     <Compile Include="Data\IRepository.cs" />
+    <Compile Include="Data\ProductDb.cs" />
     <Compile Include="Data\Repository.cs" />
     <Compile Include="Data\UsersDb.cs" />
     <Compile Include="DbConnection\ISQLite.cs" />
@@ -79,6 +80,12 @@
     </Compile>
     <Compile Include="Views\CategoryManagement\ShowCategory.xaml.cs">
       <DependentUpon>ShowCategory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProductsManagement\AddProduct.xaml.cs">
+      <DependentUpon>AddProduct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Products\ViewProducts.xaml.cs">
+      <DependentUpon>ViewProducts.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\UserManagement\AddUser.xaml.cs">
       <DependentUpon>AddUser.xaml</DependentUpon>
@@ -191,6 +198,22 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\UserManagement\EditUser.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Products\ViewProducts.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AcerTravelMate.jpg" />
+    <Content Include="Images\AcerTravelMate.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\ProductsManagement\AddProduct.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

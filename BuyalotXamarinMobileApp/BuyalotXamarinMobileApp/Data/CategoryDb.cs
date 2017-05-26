@@ -27,6 +27,12 @@ namespace BuyalotXamarinMobileApp.Data
             return (from t in _sqlconnection.Table<ProductCategory>() select t).ToList();
         }
 
+        //Get all categories
+        public IEnumerable<ProductCategory> GetCategories2()
+        {
+            return (from t in _sqlconnection.Table<ProductCategory>() select t).OrderBy(i => i.CategoryName);
+        }
+
         //Get specific category
         public ProductCategory GetCategory(int id)
         {

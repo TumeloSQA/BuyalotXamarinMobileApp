@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BuyalotXamarinMobileApp.Views.Products.ViewProducts">
+
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+        <Label Text="ImageSource.FromFile" />
+        <Image Source="AcerTravelMate.jpg" />
+        <Button Text="Add to Cart" x:Name="BtnIncrement"></Button>
+
+        <Picker Title="Select a category">
+            <Picker.Items>
+                <x:String>Computers</x:String>
+                <x:String>Laptops</x:String>
+                <x:String>E-Books</x:String>
+                <x:String>SMobile Phones</x:String>
+            </Picker.Items>
+        </Picker>
+    </StackLayout>
+</ContentPage>
+    
