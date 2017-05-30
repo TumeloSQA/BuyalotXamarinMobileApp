@@ -34,6 +34,7 @@ namespace BuyalotXamarinMobileApp
             var page3 = new MasterPageItem() { Title = "Admin Management", Icon = "itemIcon2.png", TargetType = typeof(ManageAdmins) };
             var page4 = new MasterPageItem() { Title = "Products", Icon = "itemIcon2.png", TargetType = typeof(ViewProducts) };
             var page5 = new MasterPageItem() { Title = "Products Management", Icon = "burger.jpg", TargetType = typeof(ManageProducts) };
+            var page6 = new MasterPageItem() { Title = "Products Management 2 ", Icon = "burger.jpg", TargetType = typeof(AddProducts2) };
 
 
 
@@ -43,14 +44,14 @@ namespace BuyalotXamarinMobileApp
             MenuList.Add(page3);
             MenuList.Add(page4);
             MenuList.Add(page5);
-
+            MenuList.Add(page6);
 
 
             // Setting our list to be ItemSource for ListView in MainPage.xaml
             navigationDrawerList.ItemsSource = MenuList;
 
             // Initial navigation, this can be used for our home page
-            Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(ManageCategories)));
+            Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(ManageProducts)));
         }
 
         // Event for Menu Item selection, here we are going to handle navigation based

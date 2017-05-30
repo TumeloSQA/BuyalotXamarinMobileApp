@@ -7,11 +7,15 @@
 <StackLayout>
         <Label Text="Product Details"/>
 
-        <Picker x:Name="picker" Title="Select A Category">
-            <Picker.ItemDisplayBinding>
-                <Binding Path="CategoryName"/>
-            </Picker.ItemDisplayBinding>
-        </Picker>
+        
+        <Picker  Title="Select A Category"
+                 x:Name="picker"
+        ItemDisplayBinding="{Binding CategoryName}"
+        SelectedItem="{Binding SelectedCategory}" />
+        <Label Text="{Binding SelectedCategory.CategoryName}"/>
+    
+
+        <Label x:Name="monkeyNameLabel" Text="{Binding Source={x:Reference picker}, Path=SelectedItem}" />
         <Label x:Name="lblCategory2" Text="{Binding Source={x:Reference picker}, Path=SelectedItem}"/>
         <Entry Placeholder="Select Category above" IsEnabled="False" x:Name="lblCategory" Text="{Binding Source={x:Reference picker}, Path=SelectedItem}" />
         <TableView Intent="Settings" BackgroundColor="White">
@@ -20,7 +24,7 @@
                     <EntryCell x:Name="txtName" Label="Name" Keyboard="Text" />
                     <EntryCell x:Name="txtDescription" Label="Description" Keyboard="Text" />
                     <EntryCell x:Name="txtVendor" Label="Vendor" Keyboard="Text" />
-                    <EntryCell x:Name="txtPrice" Label="Price" Keyboard="Decimal" />
+                    <EntryCell x:Name="txtPrice" Label="Price" Keyboard="Text" />
                     <ViewCell>
                         <ContentView Padding="0,0">
                             <ContentView.Padding>

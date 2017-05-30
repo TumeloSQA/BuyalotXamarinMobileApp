@@ -25,7 +25,7 @@ namespace BuyalotXamarinMobileApp.Droid.DbConnectionDroid
 
         public string GetDataBasePath()
         {
-            string filename = "BuyalotDb4.db3";
+            string filename = "BuyalotDb5.db3";
             string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData);
             return Path.Combine(path, filename);
         }

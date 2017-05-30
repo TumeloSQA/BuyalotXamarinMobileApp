@@ -27,7 +27,7 @@
             <ListView.FooterTemplate>
                 <DataTemplate>
                     <StackLayout Orientation="Horizontal" Padding="5,5,5,5">
-                        <!--<Button Text="Add New Category" Clicked="OnNewClicked" />-->
+                        <Button Text="Add New Category" Clicked="OnNewClicked" />
                     </StackLayout>
                 </DataTemplate>
             </ListView.FooterTemplate>
