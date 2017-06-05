@@ -24,7 +24,7 @@
 
             <Label Grid.Row ="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Category Details" />
             <Label Grid.Row ="2" Grid.Column="1" Text="Category Name" />
-            <Label Grid.Row="2" Grid.Column="2" Text ="{Binding CategoryName}"/>
+            <Label AutomationId="DisplayCat" Grid.Row="2" Grid.Column="2" Text ="{Binding CategoryName}"/>
             <Button Grid.Row ="5" Grid.Column="1" Text="Edit Details" Clicked="OnEditClicked" />
             <Button Grid.Row="5" Grid.Column="2" Text="Delete" Clicked="OnDeleteClicked" />
         </Grid>

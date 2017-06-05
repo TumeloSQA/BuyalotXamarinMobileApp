@@ -14,6 +14,9 @@ namespace BuyalotXamarinMobileAppUITests
             {
                 return ConfigureApp
                     .Android
+                    .DeviceSerial("3100b9331d47a22d")
+                    .ApkFile(@"C:\Dev\Project\BuyalotXamarinMobileApp\BuyalotXamarinMobileApp.Android.apk")
+                    .PreferIdeSettings()
                     .StartApp();
             }
 
@@ -23,4 +26,3 @@ namespace BuyalotXamarinMobileAppUITests
         }
     }
 }
-

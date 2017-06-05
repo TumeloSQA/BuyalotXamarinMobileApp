@@ -8,7 +8,7 @@ using Xamarin.UITest.Queries;
 namespace BuyalotXamarinMobileAppUITests
 {
     [TestFixture(Platform.Android)]
-    [TestFixture(Platform.iOS)]
+    //[TestFixture(Platform.iOS)]
     public class Tests
     {
         IApp app;
@@ -29,6 +29,36 @@ namespace BuyalotXamarinMobileAppUITests
         public void AppLaunches()
         {
             app.Screenshot("First screen.");
+        }
+
+        //[Test]
+        //public void AddProducts2()
+        //{
+        //    //Arrange
+        //    app.EnterText("EntryCat", "Kitchen");
+
+        //    //Act
+        //    app.Tap("ButtonCatCreate");
+
+        //    //Assert
+        //    var appResult = app.Query("DispCat").FirstOrDefault(result => result.Text == "Kitchen");
+        //    Assert.IsTrue(appResult != null, "Categories.get does not display correct results");
+        //}
+
+
+
+        [Test]
+        public void Add_Category()
+        {
+            //Arrange
+            app.EnterText("EntryCat", "Kitchen");
+
+            //Act
+            app.Tap("ButtonCatCreate");
+
+            //Assert
+            var appResult = app.Query("DisplayCat").FirstOrDefault(result => result.Text == "Kitchen");
+            Assert.IsTrue(appResult != null, "Categories.get does not display correct results");
         }
     }
 }

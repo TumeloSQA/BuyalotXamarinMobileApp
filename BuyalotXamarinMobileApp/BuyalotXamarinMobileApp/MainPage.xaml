@@ -62,10 +62,6 @@
         </ContentPage>
     </MasterDetailPage.Master>
 
-    <MasterDetailPage.Detail>
-        <NavigationPage>
-
-        </NavigationPage>
-    </MasterDetailPage.Detail>
+    
 
 </MasterDetailPage>

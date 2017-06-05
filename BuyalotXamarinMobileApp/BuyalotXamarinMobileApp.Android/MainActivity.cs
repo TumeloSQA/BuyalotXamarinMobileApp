@@ -20,6 +20,14 @@ namespace BuyalotXamarinMobileApp.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+
+            Xamarin.Forms.Forms.ViewInitialized += (object sender, Xamarin.Forms.ViewInitializedEventArgs e) => {
+                if (!string.IsNullOrWhiteSpace(e.View.AutomationId))
+                {
+                    e.NativeView.ContentDescription = e.View.AutomationId;
+                }
+            };
+
             LoadApplication(new App());
         }
     }

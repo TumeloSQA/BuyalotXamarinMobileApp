@@ -7,14 +7,18 @@
         <TableView Intent="Settings" BackgroundColor="White">
             <TableRoot>
                 <TableSection Title="Add New Category">
-                    <EntryCell x:Name="txtcategoryName" Label="Category Name" Keyboard="Text" />
+                    <EntryCell 
+                        x:Name="txtcategoryName" 
+                        AutomationId="EntryCat"
+                        Label="Category Name" 
+                        Keyboard="Text" />
                     <ViewCell>
                         <ContentView Padding="0,0">
                             <ContentView.Padding>
-                                <OnPlatform x:TypeArguments="Thickness" iOS="10,0" WinPhone="0,15,0,0" />
+                                <OnPlatform x:TypeArguments="Thickness" iOS="10,0" WinPhone="0,15,0,0"  />
                             </ContentView.Padding>
                             <ContentView.Content>
-                                <Button BackgroundColor="#fd6d6d" Text="Save" TextColor="White" Clicked="OnSaveClicked" />
+                                <Button BackgroundColor="#fd6d6d" Text="Save" TextColor="White" Clicked="OnSaveClicked" AutomationId="ButtonCatCreate"/>
                             </ContentView.Content>
                         </ContentView>
                     </ViewCell>
