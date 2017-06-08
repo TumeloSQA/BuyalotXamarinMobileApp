@@ -41,10 +41,10 @@
                              Padding="20,10,0,10"
                              Spacing="20">
 
-                                    <Image Source="{Binding Icon}"
+                                    <!--<Image Source="{Binding Icon}"
                          WidthRequest="40"
                          HeightRequest="40"
-                         VerticalOptions="Center" />
+                         VerticalOptions="Center" />-->
 
                                     <Label Text="{Binding Title}"
                          FontSize="Medium"

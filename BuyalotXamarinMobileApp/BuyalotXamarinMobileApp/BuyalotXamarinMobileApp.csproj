@@ -38,6 +38,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CategoriesList.xaml.cs">
+      <DependentUpon>CategoriesList.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Data\AdminDb.cs" />
     <Compile Include="Data\CategoryDb.cs" />
     <Compile Include="Data\IRepository.cs" />
@@ -55,8 +58,15 @@
     <Compile Include="Models\ProductCategory.cs" />
     <Compile Include="Models\Users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RestClient\RestClient.cs" />
+    <Compile Include="RestClient\TaskModel.cs" />
+    <Compile Include="Services\CategoryService.cs" />
     <Compile Include="ViewModels\AdminLoginViewModel.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\CategoryViewModel.cs" />
+    <Compile Include="Views\AdminAccount\AdminLogin.xaml.cs">
+      <DependentUpon>AdminLogin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\AdminManagement\AddAdmin.xaml.cs">
       <DependentUpon>AddAdmin.xaml</DependentUpon>
     </Compile>
@@ -83,6 +93,9 @@
     </Compile>
     <Compile Include="Views\ProductsManagement\AddProduct.xaml.cs">
       <DependentUpon>AddProduct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProductsManagement\AddProduct2.xaml.cs">
+      <DependentUpon>AddProduct2.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ProductsManagement\EditProduct.xaml.cs">
       <DependentUpon>EditProduct.xaml</DependentUpon>
@@ -120,6 +133,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Mono.Android">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v6.0\Mono.Android.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Newtonsoft.Json.10.0.2\lib\portable-net45+win8+wpa81+wp8\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -268,6 +284,24 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\ProductsManagement\EditProduct.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\AdminAccount\AdminLogin.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\ProductsManagement\AddProduct2.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CategoriesList.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

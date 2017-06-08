@@ -151,6 +151,8 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RestClient\RestClient.cs" />
+    <Compile Include="RestClient\TaskModel.cs" />
     <Compile Include="SQLite_Android.cs" />
   </ItemGroup>
   <ItemGroup>

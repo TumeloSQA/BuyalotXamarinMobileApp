@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BuyalotXamarinMobileApp"
+             x:Class="BuyalotXamarinMobileApp.CategoriesList"
+             xmlns:ViewModels="clr-namespace:BuyalotXamarinMobileApp.ViewModels;assesmbly=BuyalotXamarinMobileApp" Title="Display Categories">
+
+    <ContentPage.BindingContext>
+        <ViewModels:CategoryViewModel/>
+    </ContentPage.BindingContext>
+
+    <ListView ItemsSource="{Binding CategoryList}"
+              HasUnevenRows="True">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="List of Categories"/>
+                        <Label Text="{Binding CategoryName}"/>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+</ContentPage>

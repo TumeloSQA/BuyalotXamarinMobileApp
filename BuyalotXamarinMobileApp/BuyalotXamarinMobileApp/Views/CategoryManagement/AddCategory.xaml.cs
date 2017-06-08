@@ -20,7 +20,7 @@ namespace BuyalotXamarinMobileApp.Views.CategoryManagement
         {
             InitializeComponent();
         }
-        public void OnSaveClicked(object sender, EventArgs args)
+        public void OnSaveClicked(object sender, EventArgs args, string usreName)
         {
             category = new ProductCategory();
             categoryDb = new CategoryDb();
