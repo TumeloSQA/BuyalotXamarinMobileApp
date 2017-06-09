@@ -3,24 +3,30 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:BuyalotXamarinMobileApp"
              x:Class="BuyalotXamarinMobileApp.CategoriesList"
-             xmlns:ViewModels="clr-namespace:BuyalotXamarinMobileApp.ViewModels;assesmbly=BuyalotXamarinMobileApp" Title="Display Categories">
+             xmlns:viewModels="clr-namespace:BuyalotXamarinMobileApp.ViewModels;assembly=BuyalotXamarinMobileApp"
+             Title="Display Categories">
 
     <ContentPage.BindingContext>
-        <ViewModels:CategoryViewModel/>
+        <viewModels:CategoryViewModel/>
     </ContentPage.BindingContext>
-
-    <ListView ItemsSource="{Binding CategoryList}"
+    
+    <StackLayout Orientation="Vertical">
+        <Button Text="Add new Category" 
+                Clicked="Button_Clicked"/>
+        <ListView ItemsSource="{Binding CategoryList}"
               HasUnevenRows="True">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
-                    <StackLayout Orientation="Horizontal">
-                        <Label Text="List of Categories"/>
-                        <Label Text="{Binding CategoryName}"/>
+                        <StackLayout Orientation="Vertical"
+                                 Padding="12,6">
+                            <Label Text="{Binding CategoryName}" FontSize="18"/>
                     </StackLayout>
                 </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
+       </StackLayout>
+    
 
 </ContentPage>

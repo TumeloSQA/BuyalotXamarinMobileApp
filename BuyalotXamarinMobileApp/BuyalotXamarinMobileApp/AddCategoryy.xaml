@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BuyalotXamarinMobileApp"
+             x:Class="BuyalotXamarinMobileApp.AddCategoryy" Title="Add New category"
+             xmlns:viewModels1="clr-namespace:BuyalotXamarinMobileApp.ViewModels;assembly=BuyalotXamarinMobileApp">
+
+    <ContentPage.BindingContext>
+        <viewModels1:CategoryViewModel/>
+    </ContentPage.BindingContext>
+
+
+    <StackLayout Orientation="Vertical" Spacing="18">
+
+        <Label Text="Category Name"/>
+        <Entry Text="{Binding SelectedCategory.CategoryName, Mode=TwoWay}"/>
+
+        <Button Text="Create" 
+                Command="{Binding PostCommand}"/>
+
+    </StackLayout>
+</ContentPage>

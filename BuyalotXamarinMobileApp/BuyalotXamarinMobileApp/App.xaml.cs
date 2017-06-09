@@ -13,7 +13,8 @@ namespace BuyalotXamarinMobileApp
         {
             InitializeComponent();
 
-            MainPage = new BuyalotXamarinMobileApp.MainPage();
+            //MainPage = new BuyalotXamarinMobileApp.MainPage();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()

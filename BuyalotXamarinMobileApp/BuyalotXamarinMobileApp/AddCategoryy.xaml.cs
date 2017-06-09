@@ -10,16 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace BuyalotXamarinMobileApp
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CategoriesList : ContentPage
+    public partial class AddCategoryy : ContentPage
     {
-        public CategoriesList()
+        public AddCategoryy()
         {
             InitializeComponent();
-        }
-
-        private async void Button_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new AddCategoryy());
         }
     }
 }

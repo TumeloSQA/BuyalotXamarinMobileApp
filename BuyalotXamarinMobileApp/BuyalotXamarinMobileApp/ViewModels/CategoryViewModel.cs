@@ -7,11 +7,13 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace BuyalotXamarinMobileApp.ViewModels
 {
     public class CategoryViewModel : INotifyPropertyChanged
     {
+        private ProductCategory _selectedCategory;
 
         private List<ProductCategory> _categoryList { get; set; }
 
@@ -25,6 +27,35 @@ namespace BuyalotXamarinMobileApp.ViewModels
             }
 
         }
+
+
+        public ProductCategory SelectedCategory
+        {
+            get { return _selectedCategory; }
+            set
+            {
+                _selectedCategory = value; 
+                OnPropertyChanged();
+            }
+        }
+
+        public Command PostCommand
+        {
+            get
+            {
+                return new Command(async () =>
+                {
+
+                    var categoryServices = new CategoryService();
+                    await categoryServices.PostCategoryAsync(_selectedCategory);
+
+                });
+            }
+
+       
+        }
+
+       
 
         public CategoryViewModel()
         {

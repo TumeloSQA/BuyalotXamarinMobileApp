@@ -20,5 +20,15 @@ namespace BuyalotXamarinMobileApp.Services
             return categoriesList;
         }
 
+        public async Task PostCategoryAsync(ProductCategory productCategory)
+        {
+
+            RestClient<ProductCategory> restClient = new RestClient<ProductCategory>();
+
+            var categoriesList = await restClient.PostAsync(productCategory);
+
+        }
+
+
     }
 }
