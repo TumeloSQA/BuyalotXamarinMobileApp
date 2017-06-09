@@ -13,8 +13,9 @@ namespace Plugin.RestClient
     /// </summary>
     public class RestClient<T>
     {
-        private const string WebServiceUrl = "http://192.168.2.227:65152/api/CategoryManagement/";
-         
+        //private const string WebServiceUrl = "http://192.168.2.227:65152/api/CategoryManagement/";
+        private const string WebServiceUrl = "http://localhost:65152/api/CategoryManagement/";
+
         public async Task<List<T>> GetAsync()
         {
             var httpClient = new HttpClient();
